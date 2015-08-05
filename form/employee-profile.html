@@ -1,0 +1,177 @@
+<!-- employee-profile.html -->
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <label for="employeeFirstName">Employee Name</label>
+        <div class="form-group form-inline">
+                <input  id="employeeFirstName" type="text" class="form-control" name="name"  placeholder="First Name" ng-model="formData.employeeFirstName">
+                <input id="employeeMiddleName" type="text"  placeholder="Middle Name" class="form-control" name="email" ng-model="formData.employeeMiddleName">
+                <input id="employeeLastName" type="text" class="form-control" placeholder="Last Name" name="email" ng-model="formData.employeeLastName">
+        </div>
+
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-xs-6">
+        <div class="form-group">
+            <label for="employeeSSN">Employee SSN</label>
+            <input  id="employeeSSN" type="text" class="form-control" name="height" ng-model="formData.employeeSSN">
+        </div>
+
+        <div class="form-group">
+            <label for="employeeSex">Sex:</label>
+            <select id="employeeSex" class="form-control" ng-model="formData.employeeSex">
+                <option value="MALE">Male </option>
+                <option value="FEMALE">Female</option>
+                <option value="UNKNOWN">Unknown</option>
+            </select>
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="employeeEmail">Employee Email</label>
+            <input  id="employeeEmail" type="text" class="form-control" name="height" ng-model="formData.employeeEmail">
+        </div>
+
+
+
+
+        <div class="form-group">
+            <label for="employeeDateHire">Date Hired</label>
+            <input  id="employeeDateHire" type="date" class="form-control" name="name" ng-model="formData.employeeDateHire">
+        </div>
+        <div class="form-group">
+            <label for="employeeStateOfHire">State of Hire</label>
+            <input  id="employeeStateOfHire" type="text" class="form-control" name="name" ng-model="formData.employeeStateOfHire">
+        </div>
+        <div class="form-group">
+            <label for="employeeJobTitle">Occupation/Job Title</label>
+            <input  id="employeeJobTitle" type="text" class="form-control" name="name" ng-model="formData.employeeJobTitle">
+        </div>
+        <div class="form-group">
+            <label for="employeeEmployementStatus">Employement Status</label>
+            <input  id="employeeEmployementStatus" type="text" class="form-control" name="name" ng-model="formData.employeeEmployementStatus">
+        </div>
+        <div class="form-group">
+            <label for="employeeDependents">Number of Dependants</label>
+            <input  id="employeeDependents" type="number" class="form-control" name="name" ng-model="formData.employeeDependents">
+        </div>
+
+
+
+
+    </div>
+    <div class="col-xs-6">
+
+        <div class="form-group">
+            <label for="employeeAddress">Employee Address</label>
+            <input  id="employeeAddress" type="text" class="form-control" name="height" ng-model="formData.employeeAddress">
+        </div>
+
+        <div class="form-group">
+            <label for="employeeZipCode">Employee Zip Code </label>
+            <input  id="employeeZipCode" type="text" class="form-control" name="height" ng-model="formData.employeeZipCode">
+        </div>
+
+        <div class="form-group">
+            <label for="DOB">Employee DOB</label>
+            <input id="DOB" type="date" class="form-control" name="email" ng-model="formData.employeeDOB">
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="employeeMartialStatus">Marital Status:</label>
+            <select  id="employeeMartialStatus" class="form-control" ng-model="formData.employeeMaritalStatus">
+                <option value="UNMARRIED">Unmarried/Single/Divorced</option>
+                <option value="MARRIED">Married</option>
+                <option value="SEPERATED">Seperated</option>
+                <option value="UNKNOWN">Unknown</option>
+            </select>
+
+        </div>
+
+
+
+        <label for="employeeRate">Rate</label>
+        <div class="form-group form-inline">
+            <input  id="employeeRate" type="number" class="form-control" ng-model="formData.employeeRate">
+            Per
+            <select id="employeePer" class="form-control" ng-model="formData.employeePer">
+                <option value="HOUR">Hour</option>
+                <option value="DAY">Day</option>
+                <option value="WEEK">Week</option>
+                <option value="BI-WEEKLY">Bi-Weekly</option>
+                <option value="MONTHLY">Monthly</option>
+            </select>
+        </div>
+
+        <div class="form-group ">
+            <label for="employeeFullPay">Full pay for day of injury?</label>
+            <select id="employeeFullPay" class="form-control" ng-model="formData.employeeFullPay">
+                <option value="YES"> Yes</option>
+                <option value="NO">No</option>
+            </select>
+        </div>
+
+        <div class="form-group ">
+            <label for="employeeSalaryContinue">Did Employee Salary Continue?</label>
+            <select id="employeeSalaryContinue" class="form-control" ng-model="formData.employeeSalaryContinue">
+                <option value="YES"> Yes</option>
+                <option value="NO">No</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="employeeDaysWorked">Days Worked Per Week</label>
+            <input  id="employeeDaysWorked" type="number" class="form-control" name="name" ng-model="formData.employeeDaysWorked">
+        </div>
+
+
+
+    </div>
+</div>
+
+
+<!--
+<div class="text-center">
+    <span class="glyphicon glyphicon-heart"></span>
+    <h3>Thanks For Your Money!</h3>
+
+    <button type="submit" class="btn btn-danger">Submit</button>
+</div>
+-->
+
+<div class="form-group row">
+    <div class="col-xs-2" style="margin-top: 10px;">
+
+        <a style="color: #fff; text-decoration: underline;">
+            Cancel
+        </a>
+    </div>
+    <div class="col-xs-2">
+
+    </div>
+    <div class="col-xs-2">
+
+    </div>
+    <div class="col-xs-2">
+
+    </div>
+    <div class="col-xs-2">
+        <a ui-sref="form.carrier" class="btn form-button">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span>
+            Back
+        </a>
+    </div>
+
+    <div class="col-xs-2">
+        <a ui-sref="form.occurance" class="btn form-button">
+            Next<span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>

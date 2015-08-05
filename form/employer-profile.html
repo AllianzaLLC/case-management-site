@@ -1,0 +1,116 @@
+<!-- employer-profile.html -->
+
+<div class="row">
+
+    <div class="col-xs-6">
+        <div class="form-group">
+            <label for="employerName">Employer Name</label>
+            <input  id="employerName" type="text" class="form-control"  ng-model="formData.employerName">
+        </div>
+
+        <div class="form-group">
+            <label for="employerAddress">Employer Address</label>
+            <input id="employerAddress" type="text" class="form-control" ng-autocomplete="" ng-model="formData.employerAddress">
+        </div>
+
+        <div class="form-group">
+            <label for="employerZip">Employer Zip</label>
+            <input  id="employerZip" type="text" class="form-control"  ng-model="formData.employerZip">
+        </div>
+
+
+        <div class="form-group">
+            <label for="industryCode">Industry Code</label>
+            <input  id="industryCode" type="text" class="form-control"  ng-model="formData.industryCode">
+        </div>
+
+        <div class="form-group">
+            <label for="claimNumber">Carrier/ Admn. Claim Number</label>
+            <input  id="claimNumber" type="text" class="form-control" ng-model="formData.claimNumber">
+        </div>
+        <div class="form-group">
+            <label for="oshaLogNumber">OSHA Log Number</label>
+            <input  id="oshaLogNumber" type="text" class="form-control" ng-model="formData.oshaLogNumber">
+        </div>
+        <div class="form-group">
+            <label for="jusrisdiction">Jurisdiction</label>
+            <input  id="jusrisdiction" type="text" class="form-control"  ng-model="formData.jusrisdiction">
+        </div>
+
+    </div>
+    <div class="col-xs-6">
+
+        <div class="form-group">
+            <label for="employerPhoneNumber">Employer Phone Number</label>
+            <input  id="employerPhoneNumber" type="text" class="form-control"  ng-model="formData.employerPhoneNumber">
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="employerFein">Employer Fein</label>
+            <input  id="employerFein" type="text" class="form-control"  ng-model="formData.employerFein">
+        </div>
+
+
+        <div class="form-group">
+            <label for="addDifferent">Employer's Location Address (If Different)</label>
+            <input  id="addDifferent" type="text" class="form-control"  ng-model="formData.addDifferent">
+        </div>
+
+        <div class="form-group">
+            <label for="jurisdictionClaimNumber">Jurisdiction Claim Number</label>
+            <input  id="jurisdictionClaimNumber" type="text" class="form-control"  ng-model="formData.jurisdicitonClaimNumber">
+        </div>
+        <div class="form-group">
+            <label for="insuredReportNumber">Insured Report Number</label>
+            <input  id="insuredReportNumber" type="text" class="form-control"  ng-model="formData.insuredReportNumber">
+        </div>
+        <div class="form-group">
+            <label for="locationNumber">Location #</label>
+            <input  id="locationNumber" type="text" class="form-control"  ng-model="formData.locationNumber">
+        </div>
+
+        <div class="form-group">
+            <label for="reportPurposeCode">Report Purpose Code</label>
+            <input  id="reportPurposeCode" type="text" class="form-control"  ng-model="formData.reportPurposeCode">
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="form-group row">
+    <div class="col-xs-2" style="margin-top: 10px;">
+
+        <a style="color: #fff; text-decoration: underline;">
+            Cancel
+        </a>
+    </div>
+    <div class="col-xs-2">
+
+    </div>
+    <div class="col-xs-2">
+
+    </div>
+    <div class="col-xs-2">
+
+    </div>
+    <div class="col-xs-2">
+    </div>
+
+    <div class="col-xs-2">
+        <a ui-sref="form.carrier" class="btn form-button">
+            Next<span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>

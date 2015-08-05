@@ -1,0 +1,53 @@
+<!-- form.html -->
+
+
+
+
+<div class="row" style="margin-top: 20px;">
+    <div class="col-sm-8 col-sm-offset-2">
+
+        <div id="form-container">
+
+            <div class="page-header text-center">
+                <!-- the links to our nested states using relative paths -->
+                <!-- add the active class if the state matches our ui-sref -->
+                <div id="status-buttons" class="text-center">
+                    <a  ui-sref-active="active" ui-sref=".employer"><span>1</span> Employer Info</a>
+                    <a  ui-sref-active="active" ui-sref=".carrier"><span>2</span> Carrier/ Admin. Info</a>
+                    <a  ui-sref-active="active" ui-sref=".claimant"><span>3</span>Employee Information</a>
+                    <a  ui-sref-active="active" ui-sref=".occurance"><span>4</span>Occurance/Treatment</a>
+                    <a  ui-sref-active="active" ui-sref=".other"><span>5</span>Other</a>
+
+                </div>
+            </div>
+
+            <!-- use ng-submit to catch the form submission and use our Angular function -->
+            <form id="signup-form" ng-submit="processForm()">
+
+                <!-- our nested state views will be injected here -->
+                <div id="form-views" ui-view></div>
+            </form>
+
+        </div>
+
+        <!-- show our formData as it is being typed -->
+    <pre>
+        {{ formData }}
+    </pre>
+
+
+    </div>
+</div>
+
+
+<footer>
+    <div class="container footer-container">
+        <div class="row">
+            <div class="col-xs-12 text-center" style="margin-top: 25px;">
+                <p> <a ui-sref="us">Who We Are</a> | <a ui-sref="ourTeam">Our Team</a> | <a ui-sref="caseManagement">Case Management</a> | <a ui-sref="contactUs">Contact Us</a></p>
+                <p>&copy; Texas Case Management</p>
+
+            </div>
+        </div>
+    </div>
+</footer>

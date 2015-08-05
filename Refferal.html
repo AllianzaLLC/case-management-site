@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+
+    <title>Texas Case Management Refferal Form</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./signIn_files/ie-emulation-modes-warning.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        .block-div {
+            display: inline-block;
+        }
+
+        .button-margin {
+            margin-top: 25px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container" ng-app="formApp" ng-controller="formController">
+
+    <div class="contianer" id="intro">
+        <div class="row">
+            <div col-lg-12 class="text-center">
+                <h1>Texas Case Management Refferal Form</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="employerInformation">
+        <div class="row">
+            <h3>Employer's Information</h3>
+            <div class="col-sm-6">
+                <form>
+                    <input type="text" class="form-control" id="employerName" placeholder="Employer name" ng-model="employerName">
+                    <input type="text" class="form-control" id="employerAddress" placeholder="Employer Address" ng-model="employerAddress">
+                    <input type="text" class="form-control" id="employerZip" placeholder="Employer Zip" ng-model="employerZip">
+                    <input type="text" class="form-control" id="employerLocationAddress" placeholder="Employer's Location Address (If Different)" ng-model="employerLocationAddress">
+                    <input type="text" class="form-control" id="employerPhoneNumber" placeholder="Phone #" ng-model="employerPhoneNumber">
+                    <input type="text" class="form-control" id="employerFein" placeholder="Employer FEIN" ng-model="employerFein">
+                </form>
+
+            </div>
+            <div class="col-sm-6">
+                <form>
+                    <input type="text" class="form-control" id="carrierClaimNumber" placeholder="Carrier/Administrator Claim Number" ng-model="carrierClaimNumber">
+                    <input type="text" class="form-control" id="jurisdictionClaimNumber" placeholder="Jurisdiction Claim Number" ng-model="jurisdictionClaimNumber">
+                    <input type="text" class="form-control" id="oshaLogNumber" placeholder="Osha Log Number" ng-model="oshaLogNumber">
+                    <input type="text" class="form-control" id="reportPurpose" placeholder="Report Purpose" ng-model="reportPurpose">
+                    <input type="text" class="form-control" id="industryCode" placeholder="Industry Code" ng-model="industryCode">
+                    <input type="text" class="form-control" id="jurisdiction" placeholder="Jurisdiction" ng-model="jurisdiction">
+                    <input type="text" class="form-control" id="insuredReportNumber" placeholder="Insured Report Number" ng-model="insuredReportNumber">
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container" id="carrierClaimsInformation">
+        <div class="row">
+            <h3>Carrier/ Claims Administrator Information</h3>
+            <div class="col-sm-6">
+                   <form>
+                       <input type="text" id="carrierName" class="form-control" placeholder="Carrier Name">
+                       <input type="text" id="carrierAddress" class="form-control" placeholder="Address">
+                       <input type="text" id="carrierCity" class="form-control" placeholder="City">
+                       <input type="text" id="carrierState" class="form-control" placeholder="State">
+                       <input type="tel" id="carrierNumber" class="form-control" placeholder="Carrier Phone Number">
+                       <input type="text" id="carrierFein" class="form-control" placeholder="Carrier FEIN">
+                       <input type="text" id="agentName" class="form-control" placeholder="Agent Name">
+                       <input type="text" id="agentCodeNumber" class="form-control" placeholder="Agent Code Number">
+
+                   </form>
+
+            </div>
+            <div class="col-sm-6">
+                <label>Policy Period</label>
+                <div class="block-div">
+                    <input type="date" id="from" class="form-control">
+                </div>
+                <div class="block-div">
+                    <p>to</p>
+                </div>
+                <div class="block-div">
+                    <input type="date" id="to" class="form-control">
+                </div>
+                <form>
+                    <label>Check if Appropriate:</label>
+                    <input type="checkbox"  id="selfAssurance"  value="true">Self Insurance<br>
+                    <input type="text" id="policyNumber" class="form-control" placeholder="Policy/Self-Insured Number">
+                    <label>Claims Administrator:</label>
+                    <input type="text" id="claimsAdName" class="form-control" placeholder="Claims Administrator Name">
+                    <input type="text" id="claimsAdAddress" class="form-control" placeholder="Claims Administator Address">
+                    <input type="text" id="claimsAdPhoneNo" class="form-control" placeholder="Claims Administrator Phone Number">
+                    <input type="text" id="claimsAdFein" class="form-control" placeholder="Administrator FEIN">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="employeeInformation">
+        <div class="row">
+            <h3>Claimant Information</h3>
+            <div class="col-sm-6">
+                <form >
+                    <input id="firstName" type="text" class="form-control" placeholder="First Name">
+                    <input id="lastName" type="text" class="form-control" placeholder="Last Name">
+                    <input id="address" type="text" class="form-control" placeholder="Address, City, State, Zip">
+                    <input id="phone" type="tel" class="form-control" placeholder="Phone Number">
+                    <input id="email" type="email" class="form-control" placeholder="Email">
+                    <input id="ssn" type="number" class="form-control" placeholder="SSN">
+                    <label for="dob">Date of Birth: </label>
+                    <input id="dob" type="date" class="form-control">
+                    <label>Sex:</label>
+                    <select class="form-control">
+                        <option value="male">Male </option>
+                        <option value="female">Female</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                    <input id="dependants" type="number" class="form-control" placeholder="# of Dependants">
+                    <label>Did salary continue?</label>
+                    <select class="form-control">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+
+
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <form >
+
+                    <label>Marital Status:</label>
+                    <select class="form-control">
+                        <option value="0">Unmarried/Single/Divorced</option>
+                        <option value="1">Married</option>
+                        <option value="2">Seperated</option>
+                        <option value="3">Unknown</option>
+                    </select>
+
+                    <label for="rateFrom">Rate: </label>
+                    <div class="block-div">
+                        <input type="text" id="rateFrom" class="form-control">
+                    </div>
+                    <div class="block-div">
+                        <p>Per</p>
+                    </div>
+                    <div class="block-div">
+                        <select class="form-control">
+                            <option value="Day">Day</option>
+                            <option value="Week">Week</option>
+                            <option value="Month">Month</option>
+                            <option value="Year">Year</option>
+                        </select>
+                    </div>
+                    <input id="daysWorked" type="number" class="form-control" placeholder="Days Worked Per Week">
+                    <label for="dateHired">Date Hired: </label>
+                    <input id="dateHired" type="date" class="form-control" placeholder="Date Hire">
+                    <label for="stateHired">State of Hired:</label>
+                    <input id="stateHired" type="date" class="form-control" placeholder="State of Hired">
+                    <input id="occupation" type="text" class="form-control" placeholder="Occupation/ Job Title">
+                    <input id="employementStatu" type="text" class="form-control" placeholder="Employement Status">
+                    <label>Full pay for day of injury?</label>
+                    <select class="form-control">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+
+                    <input id="ncci" type="text" class="form-control" placeholder="NCCI Class Code">
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="occuranceTreatment">
+        <div class="row">
+            <h3>Occurence/Treatment</h3>
+            <div class="col-sm-6">
+                <form>
+                    <label>Time Employee Began Work:</label>
+                    <select class="form-control">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                    <label>Date of Injury/Illness</label>
+                    <input type="date" class="form-control" id="dateOfInjury" placeholder="Date of Injury/Illness">
+                    <label>Last Work Date</label>
+                    <input type="date" class="form-control" id="lastWorkDate" >
+                    <label>Date Employet Notified/ Date Disabilty Began</label>
+                    <input type="date" class="form-control" id="dateNotified">
+                    <input type="text" class="form-control" id="contactName" placeholder="Contact Name">
+                    <input type="text" class="form-control" id="typeOfInjury" placeholder="Type of Injury/Illness">
+                    <input type="text" class="form-control" id="partOfBodyAffected" placeholder="Part of Body Affected">
+                    <label>Did injury/illness/exposure occur on employer's premises?</label>
+                    <select class="form-control" id="employersPremises">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                    <input type="text" class="form-control" id="typeofInjuryCode" placeholder="Type of Injury/Illness Code">
+
+                    <input type="text" class="form-control" id="partOfBodyAffectedCode" placeholder="Part of Body Affected Code">
+
+                    <label for="whereOccured">Department or Location Where Accident or Illness Exposure Occured</label>
+                    <textarea id="whereOccured" class="form-control" rows="5"></textarea>
+
+                    <label for="equipment">All Equipment, Materials, or Chemicals Employee Was Using When Accident or Illness Occured</label>
+                    <textarea id="equipment" class="form-control" rows="5"></textarea>
+
+                    <label for="activityEngaged">Specific Activity The Employee Was Engaged In When The Accident or Illness Exposure Occured</label>
+                    <textarea id="activityEngaged" class="form-control" rows="5"></textarea>
+
+
+
+                </form>
+            </div>
+
+            <div class="col-sm-6">
+
+                <form>
+
+
+                    <label for="workProccess"> Work Proccess the Employee Was Engaged in When Accident or Illness Exposure Occured</label>
+                    <textarea id="workProccess" class="form-control" rows="5"></textarea>
+
+                    <label for="howOccured">How Injury or Illness/Abnormal health condition occured.
+                        Describe the sequence of events and include any objects or substances that directly injured the employee or made the employee ill.</label>
+                    <textarea id="howOccured"  class="form-control" rows="5"></textarea>
+
+
+                    <label for="dateReturnedToWork">Date Return(ed) To Work:</label>
+                    <input class="form-control" type="date" id="dateReturnedToWork">
+
+                    <label for="fatal">If Fatal, Give Date of Death:</label>
+                    <input id="fatal" class="form-control" type="date">
+
+                    <label for="safeguards">Where Safe Guards or Safety Equipment Provided?</label>
+                    <select class="form-control" id="safeguards">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+
+                    <label for="safeguardsUsed">Were they used?</label>
+                    <select class="form-control" id="safeguardsUsed">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+
+                    <label for="physicianName">Physician/HealthCare Provider Information:</label>
+                    <input id="physicianName" type="text" class="form-control" placeholder="Name">
+                    <input id="physicianAddress" type="text" class="form-control" placeholder="Address">
+
+                    <label for="hopsitalName">Hospital or Off Site Treatment Facility:</label>
+                    <input id="hopsitalName" type="text" class="form-control" placeholder="Name">
+                    <input id="hospitalAddress" type="text" class="form-control" placeholder="Address">
+
+                    <label for="initialTreatment">Initial Treatment:</label>
+                    <select class="form-control" id="initialTreatment">
+                        <option value="0">No medical Treatment</option>
+                        <option value="1">Minor: By Employer</option>
+                        <option value="2">Minor: Clinic/Hospital</option>
+                        <option value="3">Emergency Care</option>
+                        <option value="4">Hospitilized: 24+ Hours</option>
+                        <option value="5">Future Major Medical/ Lost Time Anticipated</option>
+                    </select>
+
+
+                </form>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container" id="other">
+        <div class="row">
+            <h3>Other Information</h3>
+            <div class="col-sm-6">
+                <form>
+                    <label for="witnessName">Witness:</label>
+                    <input id="witnessName" class="form-control" type="text" placeholder="Name">
+                    <input id="witnessPhoneNumber" class="form-control" type="text" placeholder="Phone #">
+                    <label for="administratorDate">Date Administrator Notified:</label>
+                    <input type="date" class="form-control" id="administratorDate">
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" rows="5" class="form-control"> </textarea>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <form>
+
+                    <label for="datePrepared">Date Prepared:</label>
+                    <input type="date" class="form-control" id="datePrepared">
+                    <label for="preparersName">Preparor's Information:</label>
+                    <input id="preparersName" type="text" class="form-control" placeholder="Name">
+                    <input id="preparersTitle" type="text" class="form-control" placeholder="Title">
+                    <input id="preperersPhoneNumber" type="text" class="form-control" placeholder="Phone #">
+                </form>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container button-margin" id="goButton">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <button type="submit" class="btn btn-primary" ng-click="submitForm()">Submit Form</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script>
+        var app = angular.module('formApp', []);
+        app.controller('formController', function($scope, $http){
+
+
+            $scope.submitForm = function(){
+                var params = $.param({
+                            eName: $scope.employerName,
+                            eAddress: $scope.employerAddress,
+                            eIndustryCode: $scope.industryCode,
+                            eEmployerFein: $scope.employerFein,
+                            eCarrierAdminClaimNumber: $scope.carrierClaimNumber,
+                            eOshaLogNumber: $scope.oshaLogNumber,
+                            eReportPurposeCode: '',
+                            eJurisdiction: $scope.jurisdiction,
+                            eJurisdictionReportNumber: $scope.jurisdictionClaimNumber,
+                            eInsuredReportNumber: $scope.insuredReportNumber,
+                            eEmployerLocationAddress:$scope.employerLocationAddress,
+                            eLocationNumber: '',
+                            ePhoneNumber: $scope.employerPhoneNumber
+                        }
+                );
+                window.alert(params);
+            }
+
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

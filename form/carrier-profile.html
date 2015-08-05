@@ -1,0 +1,112 @@
+
+<!-- employee-profile.html -->
+
+
+
+<div class="row">
+    <div class="col-xs-6">
+        <div class="form-group">
+            <label for="carrierName">Carrier Name</label>
+            <input id="carrierName" type="text" class="form-control"  ng-model="formData.carrierName">
+        </div>
+
+        <div class="form-group">
+            <label for="carrierAddress">Carrier Address</label>
+            <input id="carrierAddress" type="text" class="form-control"  ng-autocomplete ng-model="formData.carrierAddress">
+        </div>
+
+        <div class="form-group">
+            <label for="carrierPhoneNumber">Carrier Phone Number</label>
+            <input  id="carrierPhoneNumber" type="text" class="form-control" ng-model="formData.carrierPhoneNumber">
+        </div>
+
+        <div class="form-group">
+            <label for="policyNumber">Policy/Self-Insured Number</label>
+            <input  id="policyNumber" class="form-control" ng-model="formData.policyNumber">
+        </div>
+
+        <div class="form-group">
+            <label for="selfInsured">Self Insured?</label>
+            <select id="selfInsured" class="form-control" ng-model="formData.selfInsured">
+                <option value="YES">Yes</option>
+                <option value="NO">No</option>
+            </select>
+        </div>
+
+        <label for="policyPeriodFrom">Policy Period:</label>
+        <div class="form-group form-inline">
+           From<input type="date"  id="policyPeriodFrom" class="form-control" ng-model="formData.policyPeriodFrom"> to <input type="date" id="policyPeriodTo" class="form-control" ng-model="formData.policyPeriodTo">
+        </div>
+
+    </div>
+
+    <div class="col-xs-6">
+        <div class="form-group">
+            <label for="carrierFein">Carrier FEIN</label>
+            <input  id="carrierFein" type="text" class="form-control"ng-model="formData.carrierFein">
+        </div>
+
+        <div class="form-group">
+            <label for="agentName">Agent Name</label>
+            <input  id="agentName" type="text" class="form-control"  ng-model="formData.agentName">
+        </div>
+
+        <div class="form-group">
+            <label for="agentCodeNumber">Agent Code Number</label>
+            <input  id="agentCodeNumber" type="text" class="form-control"  ng-model="formData.agentCodeNumber">
+        </div>
+
+        <div class="form-group">
+            <label for="administratorEIN">Administrator EIN</label>
+            <input  id="administratorEIN" type="text" class="form-control"  ng-model="formData.administratorEIN">
+        </div>
+
+        <div class="form-group">
+            <label for="claimsAdName"> Claims Administrator Name</label>
+            <input  id="claimsAdName" type="text" class="form-control"  ng-model="formData.claimsAdName">
+        </div>
+
+        <div class="form-group">
+            <label for="claimsAdAddress">Claims Administrator Address</label>
+            <input  id="claimsAdAddress" type="text" class="form-control" ng-autocomplete ng-model="formData.claimsAdAddress">
+        </div>
+
+        <div class="form-group">
+            <label for="claimsAdNumber">Claims Administrator Phone Number</label>
+            <input  id="claimsAdNumber" type="text" class="form-control"  ng-model="formData.claimsAdNumber">
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="form-group row">
+    <div class="col-xs-2" style="margin-top: 10px;">
+
+        <a style="color: #fff; text-decoration: underline;">
+            Cancel
+        </a>
+    </div>
+    <div class="col-xs-2">
+
+    </div>
+    <div class="col-xs-2">
+
+    </div>
+    <div class="col-xs-2">
+
+    </div>
+    <div class="col-xs-2">
+        <a ui-sref="form.employer" class="btn form-button">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span>
+            Back
+        </a>
+    </div>
+
+    <div class="col-xs-2">
+        <a ui-sref="form.claimant" class="btn form-button">
+            Next<span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>

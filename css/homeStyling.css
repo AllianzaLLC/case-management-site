@@ -1,0 +1,219 @@
+
+/* navbar */
+.navbar-inverse {
+    background-color: white;
+    border-color: white;
+}
+
+/* link */
+.navbar-inverse .navbar-nav > li > a {
+    color: #555;
+}
+
+/* navbar brand */
+.navbar-inverse .navbar-brand {
+    color: #555;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #555;
+}
+
+ul.nav a:hover {
+    color: #555 !important;
+    text-decoration: underline !important;
+}
+
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 35px;
+    height: 35px;
+    padding-top: 0;
+}
+
+.fa-question-circle, .fa-users,
+.fa-folder-open, .fa-user-md {
+    color: white;
+}
+
+.fa-circle{
+    color: #adadad;
+}
+
+.btn {border-radius: 0;}
+
+
+
+.custom-height li a {
+    line-height: 80px;
+    height: 80px;
+    padding-top: 0;
+}
+
+.container.full-width {
+    width: auto;
+}
+
+.custom-container {
+    background-color: #e7eff6;
+    width: 85%;
+    padding-bottom: 20px;
+}
+
+.info-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 70px;
+    padding-left: 70px;
+}
+
+.custom-button {
+    border: solid 2px #adadad;
+    background-color: white;
+    color: black;
+}
+
+.contact-btn {
+    width: 120px;
+}
+
+
+
+body {
+    padding-top: 50px;
+
+}
+
+.navbar-static-top{
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1000;background: #ccc;
+}
+
+.container-intro {
+    background-color: #63ACE5;
+    color: white;
+}
+
+.mycontent-left {
+    border-right: 1px dashed #adadad;
+}
+
+
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 650px; /*same height as jumbotron */
+    top:0;
+    left:0;
+    z-index: -1;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    height: 650px;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+    background: url('../img/oil-rig-workers.jpg') no-repeat center center;
+
+}
+
+.services-padding {
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.services-main-container{
+    margin-top: 150px;
+}
+
+.bottom-border{
+    border-bottom: 1px dashed #adadad;
+}
+
+h1 {
+    font-size: 90px;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.white-text {
+    color: white;
+}
+
+.footer-container {
+    border-top: solid 1px #adadad;
+}
+
+.footer-container a {
+    color: #555;
+}
+
+.navbar-brand button {
+    background-color: #fff;
+    border: solid #fff;
+}
+
+.navbar-brand button:focus {
+    outline:none;
+}
+
+.title-height {
+    height: 55px;
+}
+
+.navbar-brand button:hover {
+    color: #555;
+}
+
+
+.title-section{
+    height: 65px;
+}
+
+.icon-section {
+    height: 150px;
+}
+
+.info-section {
+    height: 250px;
+}
+
+.usJumbo {
+    background-image: url("../img/oilWorkersBlurred.jpg");
+    height: 525px;
+    margin-top: 100px;
+}
+
+.contactJumbo {
+    background-image: url("../img/oilWorkersBlurred.jpg");
+    height: 650px;
+    margin-top: 100px;
+
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+.header-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 65px;
+}
+
+/* Form button stylings */
+
+.form-button {
+    border: solid 1px white;
+    border-radius: 25px;
+    background-color: white;
+    color: #000000;
+    width: 150px;
+}
+
+
+

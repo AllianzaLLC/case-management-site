@@ -1,0 +1,191 @@
+
+<!-- employee-profile.html -->
+
+
+
+<div class="row">
+    <div class="col-xs-6">
+        <div class="form-group">
+            <label for="occuranceDate">Date of Injury/Illness</label>
+            <input id="occuranceDate" type="date" class="form-control"  ng-model="formData.occuranceDate">
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="occuranceExposure"> Did Injury/Illness/Exposure Occur On Employers Premises?</label>
+            <select id="occuranceExposure" class="form-control" ng-model="formData.occuranceExposure">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <label for="occuranceEquipment"> All equipment, Materials, or Chemicals Employee Was Using When Accident or Illness Exposure Occured:</label>
+            <textarea id="occuranceEquipment" class="form-control" ng-model="formData.occuranceEquipment"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="occuranceSpecific"> Specific Activity The Employee Was Enganged In When The Accident or Illness Exposure Occured:</label>
+            <textarea id="occuranceSpecific" class="form-control" ng-model="formData.occuranceSpecific"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="occuranceWorkProccess"> Work Proccess The Employee Was Engaged in When Accident or Illness Exposure Occured:</label>
+            <textarea id="occuranceWorkProccess" class="form-control" ng-model="formData.occuranceWorkProccess"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="occuranceHow"> How injury or illnees/abnormal health condition occurred.Describe the sequence of events and include any objects or substances that
+            directly injured the employee or made the employee ill: </label>
+            <textarea id="occuranceHow" class="form-control" ng-model="formData.occuranceHow"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="occuranceReturned"> Date returned to work:</label>
+            <input type="date" id="occuranceReturned" class="form-control" ng-model="formData.occuranceReturned">
+        </div>
+
+        <div class="form-group">
+            <label for="occuranceFatal"> If fatal, give date of death:</label>
+            <input type="date" id="occuranceFatal" class="form-control" ng-model="formData.occuranceFatal">
+        </div>
+
+        <div class="form-group">
+            <label for="occuranceSafeGuard"> Were safeguards or safety equipment provided?</label>
+            <select id="occuranceSafeGuard" class="form-control" ng-model="formData.occuranceSafeGuard">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="occuranceSafeUsed"> Were they used?</label>
+            <select id="occuranceSafeUsed" class="form-control" ng-model="formData.occuranceSafeUsed">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div class="col-xs-6">
+        <div class="form-group">
+            <label for="occuranceLastWorkDay">Last Work Date:</label>
+            <input type="date" id="occuranceLastWorkDay" class="form-control" ng-model="formData.occuranceLastWorkDay">
+        </div>
+
+        <div class="form-group form-inline">
+            <label for="occuranceBeganWork">Time employee began work:</label>
+            <input type="time" id="occuranceBeganWork" class="form-control" ng-model="formData.occuranceBeganWork">
+        </div>
+
+
+        <div class="form-group form-inline">
+            <label for="occuranceTime">Time of Occurance:</label>
+            <input type="time" id="occuranceTime" class="form-control" ng-model="formData.occuranceTime">
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="occuranceDateNotified"> Date Employer Was Notified:</label>
+            <input type="date" id="occuranceDateNotified" class="form-control" ng-model="formData.occuranceDateNotified">
+        </div>
+
+
+        <div class="form-group">
+            <label for="occuranceTypeOfInjury"> Type Of Injury</label>
+            <input type="text" id="occuranceTypeOfInjury" class="form-control" ng-model="formData.occuranceTypeOfInjury">
+        </div>
+
+        <div class="form-group">
+            <label for="occurancePartBodyAffected"> Part of Body Affected</label>
+            <input type="text" id="occurancePartBodyAffected" class="form-control" ng-model="formData.occurancePartBodyAffected">
+        </div>
+
+        <div class="form-group">
+            <label for="occuranceDepartment">Department or Location Where Accident or Illness Exposure Occured:</label>
+            <textarea id="occuranceDepartment" class="form-control" ng-model="formData.occuranceDepartment"></textarea>
+        </div>
+
+
+        <div class="form-group">
+            <label for="occurancePhysicianName"> Physician/Health Care Provider Name</label>
+            <input type="text" id="occurancePhysicianName" class="form-control" ng-model="formData.occurancePhysicianName">
+        </div>
+
+        <div class="form-group">
+            <label for="occurancePhysicianAddress"> Physician/Health Care Provider Address</label>
+            <input type="text" id="occurancePhysicianAddress" class="form-control" ng-autocomplete="" ng-model="formData.occurancePhysicianAddress">
+        </div>
+
+        <div class="form-group">
+            <label for="occuranceHospitalName"> Hospital or Off Site Treatment Name</label>
+            <input type="text" id="occuranceHospitalName" class="form-control" ng-autocomplete="" ng-model="formData.occuranceHospitalName">
+        </div>
+
+
+        <div class="form-group">
+            <label for="occuranceHospitalAddress"> Hospital or Off Site Treatment Address</label>
+            <input type="text" id="occuranceHospitalAddress" class="form-control" ng-autocomplete="" ng-model="formData.occuranceHospitalAddress">
+        </div>
+
+        <label for="occuranceInitial">Initial Treatment:</label>
+        <select class="form-control" id="occuranceInitial" ng-model="formData.occuranceInitial">
+            <option value="No medical Treatment">No medical Treatment</option>
+            <option value="Minor: By Employer">Minor: By Employer</option>
+            <option value="Minor: Clinic/Hospital">Minor: Clinic/Hospital</option>
+            <option value="Emergency Care">Emergency Care</option>
+            <option value="Hospitilized: 24+ Hours">Hospitilized: 24+ Hours</option>
+            <option value="Future Major Medical/ Lost Time Anticipated">Future Major Medical/ Lost Time Anticipated</option>
+        </select>
+
+    </div>
+</div>
+
+
+
+
+
+<div class="form-group row">
+    <div class="col-xs-2" style="margin-top: 10px;">
+
+        <button style="color: #fff; text-decoration: underline;" ng-click="cancel()">
+            Cancel
+        </button>
+    </div>
+    <div class="col-xs-2">
+
+    </div>
+    <div class="col-xs-2">
+
+    </div>
+    <div class="col-xs-2">
+
+    </div>
+    <div class="col-xs-2">
+        <a ui-sref="form.claimant" class="btn form-button">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span>
+            Back
+        </a>
+    </div>
+
+    <div class="col-xs-2">
+        <a ui-sref="form.other" class="btn form-button">
+            Next<span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>

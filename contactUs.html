@@ -1,0 +1,41 @@
+<div class="container-fluid contactJumbo" ng-app="contactApp" id="moduleTwo">
+    <div class="container-fluid header-container">
+        <div class="row">
+            <div class="col-xs-12 " style="margin-top: 65px;">
+                <div class="header-border">
+                    <h1>Contact Us</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <form ng-submit="submitContact()">
+                    <label>Name</label>
+                    <input class="form-control input-group-sm" type="text" required="true" ng-model="from">
+                    <label>Email</label>
+                    <input type="email" class="form-control" required="true" ng-model="fromEmail">
+                    <label>Company</label>
+                    <input type="text" class="form-control" ng-model="company">
+                    <label>Message</label>
+                    <textarea class="form-control"  rows="5" required="true" ng-model="message"></textarea>
+                    <button type="submit" class="btn custom-button contact-btn" ng-click="" style="margin-top: 10px;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<footer>
+    <div class="container footer-container">
+        <div class="row">
+            <div class="col-xs-12 text-center" style="margin-top: 25px;">
+                <p> <a ui-sref="us">Who We Are</a> | <a ui-sref="ourTeam">Our Team</a> | <a ui-sref="caseManagement">Case Management</a> | <a ui-sref="contactUs">Contact Us</a></p>
+                <p>&copy; Texas Case Management</p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://getbootstrap.com/examples/signin/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>TCM Sign In Portal</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./signIn_files/ie-emulation-modes-warning.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  </head>
+
+
+<!-- Beggingin of the body just a diver -------------------->
+  <body>
+
+    <div class="container" ng-app="loginForm" ng-controller="LoginFormController">
+
+
+        <form class="form-signin" >
+            <h2 class="form-signin-heading">Texas Case Management</h2>
+            <input type="email" id="inputEmail" ng-model="formEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword"  ng-model="formPassword" class="form-control" placeholder="Password" required="">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="saveTheUser()">Sign in</button>
+            <p ng-model="test" ng-init="test='Nothing Here Yet'">{{test}}</p>
+
+        </form>
+    </div>
+
+
+
+      
+      
+      <div id="secondApp" ng-app="myApp" ng-controller="CustomerController">
+          <ul>
+              <li ng-repeat="user in users">
+                  {{ 'Name: ' + user.name + ' Email: ' + user.email }}
+              </li>
+          </ul>
+    </div>
+
+
+
+
+      
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./signIn_files/ie10-viewport-bug-workaround.js"></script>
+      
+      <script>
+          var app = angular.module('myApp', []);
+          app.controller('CustomerController', function($scope, $http) {
+              $http.get("http://ec2-52-27-132-140.us-west-2.compute.amazonaws.com/users")
+        .success(function(response) {
+
+                    $scope.users = response;
+            }).error(function(data, status, headers, config) {
+            // called asynchronously if an error occurs
+            // or server returns response with an error status.
+                    window.alert("Failed");
+            })
+          });
+
+
+          var newApp = angular.module('loginForm', []);
+          newApp.controller('LoginFormController', function($scope, $http){
+
+              $scope.test = 'Nothing Yet';
+
+              $scope.saveTheUser = function(){
+                  var xsrf = $.param({ name: 'Mark Ruvalcaba', email: $scope.formEmail, password: $scope.formPassword});
+               $http({
+                   url: 'http://ec2-52-27-132-140.us-west-2.compute.amazonaws.com/verify',
+                   method: 'POST',
+                   data: xsrf,
+                   headers: {
+                       'Content-Type': 'application/x-www-form-urlencoded'
+                   }
+               }).success(function (response) {
+                   alert(response)
+                   console.log(response);
+               });
+
+                  $scope.test = $scope.formEmail + $scope.formPassword;
+              };
+
+          });
+
+
+          angular.bootstrap(document.getElementById("secondApp"), ['myApp']);
+
+      </script>
+
+
+
+
+
+    </body>
+    </html>
